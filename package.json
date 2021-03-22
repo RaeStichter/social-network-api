@@ -2,6 +2,25 @@
   "dependencies": {
     "express": "^4.17.1",
     "moment": "^2.29.1",
-    "mongoose": "^5.11.19"
-  }
+    "mongoose": "^5.11.19",
+    "npm": "^7.6.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "social-network-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaeStichter/social-network-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaeStichter/social-network-api/issues"
+  },
+  "homepage": "https://github.com/RaeStichter/social-network-api#readme"
 }

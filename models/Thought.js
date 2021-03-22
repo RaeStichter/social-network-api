@@ -1,4 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
+var moment = require('moment');
 
 const ReactionSchema = new Schema (
     {
@@ -19,6 +20,7 @@ const ReactionSchema = new Schema (
         createdAt: {
             type: Date,
             default: Date.now
+            // this is where the moment info will go
         }
     },
     {
@@ -39,6 +41,7 @@ const ThoughtSchema = new Schema (
         createdAt: {
             type: Date,
             default: Date.now
+            // this is where monemnt will go
         },
         username: {
             type: Schema.Types.ObjectId,
