@@ -11,15 +11,17 @@ const ReactionSchema = new Schema (
         reactionBody: {
             type: String,
             required: true,
-            maxlength:280
+            maxlength: 280
         },
         username: {
-            type: Schema.Types.ObjectId,
-            ref: 'User'
+            type: String,//Schema.Types.ObjectId,
+            required: true
+            //ref: 'User'
         },
         createdAt: {
             type: Date,
-            default: Date.now
+            default: Date.now,
+            get: () => moment().format('MMMM DO YYYY, h:mm a')
             // this is where the moment info will go
         }
     },
@@ -40,12 +42,15 @@ const ThoughtSchema = new Schema (
         },
         createdAt: {
             type: Date,
-            default: Date.now
+            default: Date.now,
+            get: () => moment().format('MMMM DO YYYY, h:mm a')
             // this is where monemnt will go
         },
         username: {
-            type: Schema.Types.ObjectId,
-            ref: 'User'
+            type: String,//Schema.Types.ObjectId,
+            required: true
+            // type: Schema.Types.ObjectId,
+            // ref: 'User'
         },
         // use the ReactionSchema to validate data for a reaction
         reactions: [ReactionSchema]
